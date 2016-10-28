@@ -87,7 +87,9 @@ extension ChatViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MessageCell
-        cell.userLabel.text = (messages[indexPath.row]["user"] as? PFUser)?.username
+//        let user = messages[indexPath.row]["user"] as! PFUser
+//        let message = messages[indexPath.row]
+//        cell.userLabel.text = user.username
         cell.messageLabel.text = messages[indexPath.row]["text"] as? String
 
         return cell
